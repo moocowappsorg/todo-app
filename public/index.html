@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Todo List</h1>
+      <p class="subtitle">Keep track of your tasks</p>
+    </header>
+
+    <main>
+      <!-- Add Todo Section -->
+      <section id="add-todo" class="add-todo-section">
+        <form id="todo-form">
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="What needs to be done?"
+            autocomplete="off"
+            required
+          >
+          <button type="submit" id="add-btn">Add</button>
+        </form>
+      </section>
+
+      <!-- Todo List Section -->
+      <section id="todo-list-section">
+        <div id="loading" class="loading">Loading your todos...</div>
+        <div id="error-message" class="error-message" style="display: none;"></div>
+        <div id="empty-state" class="empty-state" style="display: none;">
+          <p>No todos yet. Add one above!</p>
+        </div>
+        <ul id="todo-list" class="todo-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Simple Todo List App</p>
+    </footer>
+  </div>
+
+  <!-- Todo Item Template -->
+  <template id="todo-template">
+    <li class="todo-item" data-id="">
+      <input type="checkbox" class="todo-complete" aria-label="Mark as complete">
+      <span class="todo-title"></span>
+      <button class="todo-delete" aria-label="Delete todo">×</button>
+    </li>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
