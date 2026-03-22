@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "echo 'Build complete'"
+    "build": "npm ci --only=production"
   },
   "dependencies": {
     "express": "^4.18.2",
