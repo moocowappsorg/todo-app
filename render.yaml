@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: todo-app
-    env: node
-    buildCommand: npm install
-    startCommand: npm start
-    region: oregon
-    plan: free
